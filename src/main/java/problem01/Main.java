@@ -16,11 +16,23 @@ public class Main {
 				System.out.print( "짝" );
 			}
 			
-			System.out.println( "" );			
+			System.out.println( "" );
 		}
 	}
 	
 	public static int countClap(int number) {
-		return 0;
+		int result = 0;
+		String numLength = number+"";
+		int length = numLength.length();
+		
+		for(int i = 0; i < length; i++) {
+			if(numLength.substring(i, i+1).equals("3") || 
+			   numLength.substring(i, i+1).equals("6") || 
+			   numLength.substring(i, i+1).equals("9")) {
+				result++;
+			}
+		}
+		
+		return result;
 	}
 }
